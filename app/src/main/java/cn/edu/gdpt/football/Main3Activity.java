@@ -4,11 +4,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.Response;
 
 public class Main3Activity extends AppCompatActivity {
-int iiiiiii = 0;
+    int iiiiiii = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,22 +32,22 @@ int iiiiiii = 0;
             @Override
             public void run() {
                 try {
-            while (true){
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        button.setBackgroundResource(ssssss[iiiiiii]);
+                    while (true) {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                button.setBackgroundResource(ssssss[iiiiiii]);
 
-                        iiiiiii++;
-                        if (iiiiiii==ssssss.length){
-                            iiiiiii=0;
-                        }
+                                iiiiiii++;
+                                if (iiiiiii == ssssss.length) {
+                                    iiiiiii = 0;
+                                }
+                            }
+                        });
+
+                        Thread.sleep(1000);
                     }
-                });
-
-                Thread.sleep(1000);
-            }
-                }catch (Exception e){
+                } catch (Exception e) {
 
                 }
             }
@@ -51,18 +56,46 @@ int iiiiiii = 0;
 
 
 
+       new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    String s = "http://apicloud.mob.com/football/league/queryMatchInfoByRound?key=2b5c9f9b1f018&leagueTypeCn=德甲&season=2013&round=3";
+                    OkHttpClient okHttpClient = new OkHttpClient();
+                    Response execute = okHttpClient.newCall(new Request.Builder().get().url(s).build()).execute();
+                    final Data data = new Gson().fromJson(execute.body().string(), Data.class);
 
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
 
-
-
-
-        Data data = new Gson().fromJson(sssssssssssssssssssssssssss, Data.class);
 
         TextView textView = findViewById(R.id.qqq111);
         TextView textView222 = findViewById(R.id.qq22);
 
-        textView.setText("3");
-        textView222.setText("1");
+        textView.setText(data.getResult().get(0).getHomeTeamScore());
+        textView222.setText(data.getResult().get(0).getVisitorsScore());
+
+
+        TextView textView1dfgvfet = findViewById(R.id.ghawsjwq);
+        TextView textView1dfgvfeewfdtrft = findViewById(R.id.sdfdw);
+
+        textView1dfgvfet.setText(data.getResult().get(0).getHomeTeam());
+        textView1dfgvfeewfdtrft.setText(data.getResult().get(0).getVisitors());
+
+
+
+
+                        }
+                    });
+                }catch (Exception e){
+                   // Toast.makeText(this, "网络XXX", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        }).start();
+
+
 
 
 
