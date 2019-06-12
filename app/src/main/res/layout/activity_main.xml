@@ -5,18 +5,8 @@
     android:id="@+id/KIRA"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/idfr"
+    android:background="@drawable/ithg"
     tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="125dp"
-        android:layout_height="146dp"
-        android:layout_marginStart="143dp"
-        android:layout_marginTop="63dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fid" />
 
     <TextView
         android:id="@+id/textView"
@@ -84,5 +74,15 @@
         android:text="注册"
         app:layout_constraintStart_toEndOf="@+id/button"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="128dp"
+        android:layout_height="131dp"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="66dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fuy" />
 
 </android.support.constraint.ConstraintLayout>
