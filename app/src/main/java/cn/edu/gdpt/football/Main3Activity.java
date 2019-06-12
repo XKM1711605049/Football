@@ -16,9 +16,9 @@ int iiiiiii = 0;
         final Button button = findViewById(R.id.bbbbbbbbbbbbbbb);
 
         final int[] ssssss = {
-                R.drawable.did,
-                R.drawable.dre,
-                R.drawable.fid,
+                R.drawable.tted,
+                R.drawable.stu,
+                R.drawable.bbt,
 
 
                 R.drawable.did,
