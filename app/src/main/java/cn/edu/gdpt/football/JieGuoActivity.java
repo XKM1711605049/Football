@@ -2,7 +2,9 @@ package cn.edu.gdpt.football;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -11,14 +13,79 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 
-public class Main3Activity extends AppCompatActivity {
+public class JieGuoActivity extends AppCompatActivity {
     int iiiiiii = 0;
+public   static   Data data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
         final Button button = findViewById(R.id.bbbbbbbbbbbbbbb);
+
+
+        //拿到结果了——————————————————————————————————————————————————————
+        if (data.getResult().size()<=3){
+
+        }else {
+            Toast.makeText(JieGuoActivity.this, "", Toast.LENGTH_SHORT).show();
+        }
+        TextView textView = findViewById(R.id.qqq111);
+        TextView textView222 = findViewById(R.id.qq222);
+
+        textView.setText(data.getResult().get(0).getHomeTeamScore());
+        textView222.setText(data.getResult().get(0).getVisitorsScore());
+
+
+        TextView textView1dfgvfet = findViewById(R.id.ghawsjwq);
+        TextView textView1dfgvfeewfdtrft = findViewById(R.id.sdfdw);
+
+        textView1dfgvfet.setText(data.getResult().get(0).getHomeTeam());
+        textView1dfgvfeewfdtrft.setText(data.getResult().get(0).getVisitors());
+        //第二
+        TextView textView11 = findViewById(R.id.qqq33);
+        TextView textView333 = findViewById(R.id.qq44);
+
+        textView11.setText(data.getResult().get(1).getHomeTeamScore());
+        textView333.setText(data.getResult().get(1).getVisitorsScore());
+
+        TextView textView1dfgvfet1 = findViewById(R.id.ghawsjwq2);
+        TextView textView1dfgvfeewfdtrft1 = findViewById(R.id.sdfdw2);
+
+        textView1dfgvfet1.setText(data.getResult().get(1).getHomeTeam());
+        textView1dfgvfeewfdtrft1.setText(data.getResult().get(1).getVisitors());
+        //第三
+        TextView textView22 = findViewById(R.id.qqq55);
+        TextView textView44 = findViewById(R.id.qq66);
+
+        textView22.setText(data.getResult().get(2).getHomeTeamScore());
+        textView44.setText(data.getResult().get(2).getVisitorsScore());
+
+        TextView textView1dfgvfet2 = findViewById(R.id.ghawsjwq3);
+        TextView textView1dfgvfeewfdtrft2 = findViewById(R.id.sdfdw3);
+
+        textView1dfgvfet2.setText(data.getResult().get(2).getHomeTeam());
+        textView1dfgvfeewfdtrft2.setText(data.getResult().get(2).getVisitors());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         final int[] ssssss = {
                 R.drawable.tted,
@@ -56,11 +123,20 @@ public class Main3Activity extends AppCompatActivity {
 
 
 
-       new Thread(new Runnable() {
+
+
+
+
+
+
+    }
+
+    private void sssssssssssssssssssssssssssssssssssssss(final String s1111111111111111111111111, final String s222222222222222, final String s333333333333333333333333333333333333) {
+        new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
-                    String s = "http://apicloud.mob.com/football/league/queryMatchInfoByRound?key=2b5c9f9b1f018&leagueTypeCn=德甲&season=2013&round=3";
+                    String s = "http://apicloud.mob.com/football/league/queryMatchInfoByRound?key=2b5c9f9b1f018&leagueTypeCn="+s1111111111111111111111111+"&season="+s222222222222222+"&round="+s333333333333333333333333333333333333;
                     OkHttpClient okHttpClient = new OkHttpClient();
                     Response execute = okHttpClient.newCall(new Request.Builder().get().url(s).build()).execute();
                     final Data data = new Gson().fromJson(execute.body().string(), Data.class);
@@ -68,36 +144,60 @@ public class Main3Activity extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
+                            //拿到结果了——————————————————————————————————————————————————————
+                            if (data.getResult().size()<=3){
+                                
+                            }else {
+                                Toast.makeText(JieGuoActivity.this, "", Toast.LENGTH_SHORT).show();
+                            }
+                            TextView textView = findViewById(R.id.qqq111);
+                            TextView textView222 = findViewById(R.id.qq222);
+
+                            textView.setText(data.getResult().get(0).getHomeTeamScore());
+                            textView222.setText(data.getResult().get(0).getVisitorsScore());
 
 
-        TextView textView = findViewById(R.id.qqq111);
-        TextView textView222 = findViewById(R.id.qq22);
+                            TextView textView1dfgvfet = findViewById(R.id.ghawsjwq);
+                            TextView textView1dfgvfeewfdtrft = findViewById(R.id.sdfdw);
 
-        textView.setText(data.getResult().get(0).getHomeTeamScore());
-        textView222.setText(data.getResult().get(0).getVisitorsScore());
+                            textView1dfgvfet.setText(data.getResult().get(0).getHomeTeam());
+                            textView1dfgvfeewfdtrft.setText(data.getResult().get(0).getVisitors());
+                            //第二
+                            TextView textView11 = findViewById(R.id.qqq33);
+                            TextView textView333 = findViewById(R.id.qq44);
 
+                            textView11.setText(data.getResult().get(1).getHomeTeamScore());
+                            textView333.setText(data.getResult().get(1).getVisitorsScore());
 
-        TextView textView1dfgvfet = findViewById(R.id.ghawsjwq);
-        TextView textView1dfgvfeewfdtrft = findViewById(R.id.sdfdw);
+                            TextView textView1dfgvfet1 = findViewById(R.id.ghawsjwq2);
+                            TextView textView1dfgvfeewfdtrft1 = findViewById(R.id.sdfdw2);
 
-        textView1dfgvfet.setText(data.getResult().get(0).getHomeTeam());
-        textView1dfgvfeewfdtrft.setText(data.getResult().get(0).getVisitors());
+                            textView1dfgvfet1.setText(data.getResult().get(1).getHomeTeam());
+                            textView1dfgvfeewfdtrft1.setText(data.getResult().get(1).getVisitors());
+                            //第三
+                            TextView textView22 = findViewById(R.id.qqq55);
+                            TextView textView44 = findViewById(R.id.qq66);
+
+                            textView22.setText(data.getResult().get(2).getHomeTeamScore());
+                            textView44.setText(data.getResult().get(2).getVisitorsScore());
+
+                            TextView textView1dfgvfet2 = findViewById(R.id.ghawsjwq3);
+                            TextView textView1dfgvfeewfdtrft2 = findViewById(R.id.sdfdw3);
+
+                            textView1dfgvfet2.setText(data.getResult().get(2).getHomeTeam());
+                            textView1dfgvfeewfdtrft2.setText(data.getResult().get(2).getVisitors());
+
 
 
 
                         }
                     });
                 }catch (Exception e){
-                   // Toast.makeText(this, "网络XXX", Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(this, "网络XXX", Toast.LENGTH_SHORT).show();
                 }
 
             }
         }).start();
-
-
-
-
-
     }
 
 

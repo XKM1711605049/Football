@@ -9,37 +9,30 @@
 
     <Button
         android:id="@+id/bbbbbbbbbbbbbbb"
-        android:background="@drawable/tted"
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
-
-
+        android:layout_height="200dp"
+        android:background="@drawable/tted" />
 
 
     <LinearLayout
 
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
+        android:layout_height="wrap_content">
 
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:background="@drawable/timg" />
 
             <TextView
                 android:id="@+id/ghawsjwq"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="巴黎圣日耳曼" />
+                android:text="巴黎圣日耳曼"
+                android:textColor="#000000"
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -73,7 +66,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/qq22"
+                    android:id="@+id/qq222"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#cccccc"
@@ -95,25 +88,195 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:background="@drawable/ywtx" />
 
             <TextView
                 android:id="@+id/sdfdw"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="尤文图斯" />
+                android:text="尤文图斯"
+                android:textColor="#000000"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ghawsjwq2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="巴黎圣日耳曼"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/qqq33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#cccccc"
+                    android:padding="10dp"
+                    android:text="2"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:padding="10dp"
+                    android:text="-"
+                    android:textSize="70sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/qq44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#cccccc"
+                    android:padding="10dp"
+                    android:text="0"
+                    android:textSize="30sp" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#1F8EE0"
+                android:text="赛事回顾"
+                android:textColor="#fff"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sdfdw2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="尤文图斯"
+                android:textColor="#000000"/>
         </LinearLayout>
     </LinearLayout>
 
 
+    <LinearLayout
 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ghawsjwq3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="巴黎圣日耳曼"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/qqq55"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#cccccc"
+                    android:padding="10dp"
+                    android:text="2"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:padding="10dp"
+                    android:text="-"
+                    android:textSize="70sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/qq66"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#cccccc"
+                    android:padding="10dp"
+                    android:text="0"
+                    android:textSize="30sp" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#1F8EE0"
+                android:text="赛事回顾"
+                android:textColor="#fff"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sdfdw3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="尤文图斯"
+                android:textColor="#000000"/>
+        </LinearLayout>
+    </LinearLayout>
 
 
 
