@@ -24,7 +24,7 @@ public class chaxun extends AppCompatActivity {
         edt_liansai=findViewById(R.id.edt_liansai);
         edt_saiji=findViewById(R.id.edt_saiji);
         edt_lun=findViewById(R.id.edt_lun);
-        btn_cha=findViewById(R.id.button);
+        btn_cha=findViewById(R.id.btn_cha);
 
 
         btn_cha.setOnClickListener(new View.OnClickListener() {
