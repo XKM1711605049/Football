@@ -17,7 +17,7 @@ public class DengluActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               final Intent intent=new Intent(DengluActivity.this,chaxun.class);
+                Intent intent=new Intent(DengluActivity.this,chaxun.class);
                startActivity(intent);
             }
         });

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.squareup.okhttp.OkHttpClient;
@@ -33,8 +34,9 @@ public class chaxun extends AppCompatActivity {
                 String s1111111111111111111111111 = edt_liansai.getText().toString();
                 String s222222222222222 = edt_saiji.getText().toString();
                 String s333333333333333333333333333333333333 = edt_lun.getText().toString();
+                sssssssssssssssssssssssssssssssssssssss("德甲","2014","1");
 
-                sssssssssssssssssssssssssssssssssssssss(s1111111111111111111111111,s222222222222222,s333333333333333333333333333333333333);
+
             }
         });
 
@@ -50,6 +52,7 @@ public class chaxun extends AppCompatActivity {
                     Response execute = okHttpClient.newCall(new Request.Builder().get().url(s).build()).execute();
                     final Data data = new Gson().fromJson(execute.body().string(), Data.class);
 
+                    //德甲
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -67,15 +70,20 @@ public class chaxun extends AppCompatActivity {
 //                            textView1dfgvfet.setText(data.getResult().get(0).getHomeTeam());
 //                            textView1dfgvfeewfdtrft.setText(data.getResult().get(0).getVisitors());
 
-                            JieGuoActivity.data = data;
-                            Intent intent=new Intent(getApplication(),JieGuoActivity.class);
+                            JieGuoActivity.data =data;
+                                    Intent intent=new Intent(chaxun.this,JieGuoActivity.class);
                             startActivity(intent);
 
 
                         }
                     });
                 }catch (Exception e){
-                    // Toast.makeText(this, "网络XXX", Toast.LENGTH_SHORT).show();
+                  runOnUiThread(new Runnable() {
+                      @Override
+                      public void run() {
+                          Toast.makeText(chaxun.this, "网络XXX", Toast.LENGTH_SHORT).show();
+                      }
+                  });
                 }
 
             }
