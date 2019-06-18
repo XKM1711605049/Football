@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:text="巴黎圣日耳曼"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                 />
         </LinearLayout>
 
         <LinearLayout

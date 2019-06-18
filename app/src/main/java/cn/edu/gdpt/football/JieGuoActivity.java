@@ -24,6 +24,7 @@ public   static   Data data;
         final Button button = findViewById(R.id.bbbbbbbbbbbbbbb);
 
 
+        //西甲
         //拿到结果了——————————————————————————————————————————————————————
         if (data.getResult().size()<=3){
 

@@ -34,7 +34,7 @@ public class chaxun extends AppCompatActivity {
                 String s1111111111111111111111111 = edt_liansai.getText().toString();
                 String s222222222222222 = edt_saiji.getText().toString();
                 String s333333333333333333333333333333333333 = edt_lun.getText().toString();
-                sssssssssssssssssssssssssssssssssssssss("德甲","2014","1");
+                sssssssssssssssssssssssssssssssssssssss(s1111111111111111111111111,s222222222222222,s333333333333333333333333333333333333);
 
 
             }
